@@ -1,7 +1,10 @@
 version: '3'
 services:
-  front:
-    build: ./apps/front
+  app:
+    build: .
+    command: > 
+      mix phx.server
+    working_dir: /app
     ports:
       - "4000:4000"
     environment:
